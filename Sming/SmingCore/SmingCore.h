@@ -26,6 +26,7 @@
 #include "Timer.h"
 #include "Wire.h"
 #include "SPISoft.h"
+#include "Mutex.h"
 
 #include "Platform/System.h"
 #include "Platform/Station.h"

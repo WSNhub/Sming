@@ -10,6 +10,7 @@
 
 #include "../Wiring/WiringFrameworkDependencies.h"
 #include "../Wiring/Stream.h"
+#include "Mutex.h"
 
 // Default values
 #define I2C_DEFAULT_SCL_PIN		0
@@ -38,11 +39,15 @@ public:
 	size_t write(uint8_t data);
 	size_t write(const uint8_t *data, size_t quantity);
 
+        void lock();
+        void unlock();
+
 protected:
 	uint8_t pushData();
 
 private:
 	SoftI2cMaster* master;
+        Mutex          mutex;
 	int SCL;
 	int SDA;
 	int targetAddress;
