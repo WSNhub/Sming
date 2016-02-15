@@ -27,6 +27,7 @@
 #include "Wire.h"
 #include "SPISoft.h"
 #include "SPI.h"
+#include "Mutex.h"
 
 
 #include "Platform/System.h"

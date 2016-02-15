@@ -2,3 +2,5 @@ out
 language.settings.xml
 .settings
 nbproject
+Sming/Libraries/MyInterpreter
+Sming/Libraries/MySensors

@@ -142,4 +142,14 @@ size_t TwoWire::write(const uint8_t *data, size_t quantity)
 	return quantity;
 }
 
+void TwoWire::lock()
+{
+    mutex.Lock();
+}
+
+void TwoWire::unlock()
+{
+    mutex.Unlock();
+}
+
 TwoWire Wire = TwoWire(I2C_DEFAULT_SCL_PIN, I2C_DEFAULT_SDA_PIN);
