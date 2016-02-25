@@ -78,8 +78,12 @@ class Vector : public Countable<Element>
 
      const Vector<Element>& operator=(const Vector<Element>& rhv)
      {
-    	 if (this != &rhv)
-    		 copyFrom(rhv);
+         if (this != &rhv)
+         {
+             removeAllElements();
+             delete[] _data;
+		     copyFrom(rhv);
+         }
     	 return *this;
      }
      const Vector<Element>& operator=(const Vector<Element>&& other) // move assignment
