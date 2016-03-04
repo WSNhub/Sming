@@ -200,7 +200,7 @@ String StationClass::getSSID()
 		debugf("Can't read station configuration!");
 		return "";
 	}
-	debugf("SSID: %s", (char*)config.ssid);
+	//debugf("SSID: %s", (char*)config.ssid);
 	return String((char*)config.ssid);
 }
 
@@ -212,7 +212,7 @@ String StationClass::getPassword()
 		debugf("Can't read station configuration!");
 		return "";
 	}
-	debugf("Pass: %s", (char*)config.password);
+	//debugf("Pass: %s", (char*)config.password);
 	return String((char*)config.password);
 }
 
