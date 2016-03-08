@@ -26,7 +26,7 @@
 #include "WiringFrameworkDependencies.h"
 
 /** Delay used for software I2C */
-uint8_t const I2C_DELAY_USEC = 2;
+uint8_t const I2C_DELAY_USEC = 4; //TODO based on CPU speed
 
 /** Bit to or with address for read start and read restart */
 uint8_t const I2C_READ = 1;
