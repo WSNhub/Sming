@@ -317,7 +317,7 @@ $(RBOOT_BIN):
 
 $(LIBMAIN_DST): $(LIBMAIN_SRC)
 	@echo "OC $@"
-	@$(OBJCOPY) -W Cache_Read_Enable_New $^ $@
+	@$(OBJCOPY) -W Cache_Read_Enable_New $(OBJ_CPY_PARAMS) $^ $@
 
 spiff_update: spiff_clean $(SPIFF_BIN_OUT)
 
